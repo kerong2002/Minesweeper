@@ -13,8 +13,8 @@
           不插旗幟，點完全圖非炸彈位置，也視為勝利  
 高度:9格  
 寬度:9格  
-炸彈數量:10顆 
-![image](https://github.com/kerong2002/minesweeper/blob/main/minesweeper.PNG)
+炸彈數量:10顆  
+![image](https://github.com/kerong2002/minesweeper/blob/main/minesweeper.PNG)  
  
 #2023/04/21 更新  
 ====
