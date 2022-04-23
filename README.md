@@ -14,7 +14,7 @@
 高度:9格  
 寬度:9格  
 炸彈數量:10顆  
-編寫程式:
+編寫程式:python tkinter    
 ![image](https://github.com/kerong2002/minesweeper/blob/main/minesweeper.PNG)  
  
 #2023/04/21 更新  
