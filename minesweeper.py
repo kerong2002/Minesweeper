@@ -7,7 +7,7 @@ import random
 window=Tk()
 window.title("minesweeper")
 window.configure(bg='#d0d0d0')
-window.geometry("510x670+400+70")
+window.geometry("540x670+400+70")
 bomb_number=10  #炸彈
 game_Y_size=9   #高度
 game_X_size=9   #寬度
@@ -378,10 +378,10 @@ labelText.set(str(counter))
 '''=========================<新遊戲設定>============================'''
 def new_play_game():
     Label(window, textvariable=remain_bomb,font='160',height='3',bg='#d0d0d0').place(y = 10,x = 5*game_X_size)
-    Label(window, textvariable=labelText,font='160',height='3',bg='#d0d0d0').place(y = 10,x = 50*game_Y_size)
+    Label(window, textvariable=labelText,font='160',height='3',bg='#d0d0d0').place(y = 10,x = 55*game_X_size)
     smile=Button(window,textvariable=change_smile,font='200',height='2',bg='Snow')
     smile.bind("<Button-1>",smile_do)#左鍵
-    smile.place(y = 15,x = int(26*game_X_size+4/2))
+    smile.place(y = 15,x = int(27*game_X_size+5/2)+3)
 new_play_game()
 '''=========================<左右鍵搜尋>============================'''
 def search(event,x,y):
@@ -428,6 +428,6 @@ def set_button():
             btn[y][x].bind("<Button-1>",handlerAdaptor(play,x=x,y=y))
             btn[y][x].bind("<Button-2>", handlerAdaptor(search, x=x, y=y))
             btn[y][x].config(text=' ',font='35', bg='#c6c6d3',fg=text_color[chess[y][x]])
-            btn[y][x].place(y = 57*y+80,x = 52*x+20)
+            btn[y][x].place(y = 57*y+80,x = 56*x+20)
 set_button()
 window.mainloop()
