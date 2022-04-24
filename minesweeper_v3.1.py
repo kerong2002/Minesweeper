@@ -22,19 +22,21 @@ bomb_number_cnt=bomb_number #剩餘
 win_answer=[]   #勝利條件
 is_win=False    #是否勝利
 stop_now=False  #是否強制暫停
-trigger=False
-last_game=0
+trigger=False   #觸發判定
+last_game=0     #上場模式紀錄
 '''=========================<mune>=============================='''
-def show(i):
+def show(i):  #help呼叫
     tkinter.messagebox.showwarning(title='Author : Ke-Rong,Chen ', message='Thanks for playing!')
     print('help')
+'''=========================<new_game>=============================='''
 def menu_operation():
     smile_do(True)
+'''=========================<簡單模式>=============================='''
 def easy_mod():
     global smile,bomb_text,time_text
-    smile.place_forget()
-    bomb_text.place_forget()
-    time_text.place_forget()
+    smile.place_forget()        #清除舊按鈕
+    bomb_text.place_forget()    #清除舊Label
+    time_text.place_forget()    #清除舊Label
     global game_X_size,game_Y_size,bomb_number,last_game
     window.geometry("310x380+600+200")
     game_X_size = 9
@@ -43,11 +45,12 @@ def easy_mod():
     smile_do(True)
     last_game=0
     print('easy')
+'''=========================<普通模式>=============================='''
 def normal_mod():
     global smile,bomb_text,time_text
-    smile.place_forget()
-    bomb_text.place_forget()
-    time_text.place_forget()
+    smile.place_forget()        #清除舊按鈕
+    bomb_text.place_forget()    #清除舊Label
+    time_text.place_forget()    #清除舊Label
     global game_X_size,game_Y_size,bomb_number,last_game
     window.geometry("520x600+500+100")
     game_X_size = 16
@@ -56,11 +59,12 @@ def normal_mod():
     smile_do(True)
     last_game=1
     print('normal')
+'''=========================<困難模式>=============================='''
 def hard_mod():
     global smile,bomb_text,time_text
-    smile.place_forget()
-    bomb_text.place_forget()
-    time_text.place_forget()
+    smile.place_forget()        #清除舊按鈕
+    bomb_text.place_forget()    #清除舊Label
+    time_text.place_forget()    #清除舊Label
     global game_X_size,game_Y_size,bomb_number,last_game
     window.geometry("930x600+280+100")
     game_X_size = 30
@@ -69,18 +73,19 @@ def hard_mod():
     smile_do(True)
     last_game=2
     print('hard')
+'''=========================<菜單建置>====================================='''
 menuBar = Menu(window)
-menuFile =Menu(menuBar, tearoff=False)
+menuFile =Menu(menuBar, tearoff=False) #設定一個file的主選單
 menuBar.add_cascade(label='set',font=('Inconsolata',10), menu=menuFile)        #menu set
 menuFile.add_command(label='New game',font=('Inconsolata',10), command=menu_operation)#新局
 menuDifficulty = tkinter.Menu(menuFile, tearoff=False) #母菜單
-menuFile.add_cascade(label='Difficulty', menu=menuDifficulty) #子菜單
-menuDifficulty.add_command(label='Easy',font=('Inconsolata',10), command=easy_mod)     #簡單難度
-menuDifficulty.add_command(label='Normal',font=('Inconsolata',10), command=normal_mod) #普通難度
-menuDifficulty.add_command(label='Hard',font=('Inconsolata',10), command=hard_mod)     #困難難度
-menuFile.add_command(label='Exit',font=('Inconsolata',10), command=window.destroy)#離開
+menuFile.add_cascade(label='Difficulty', menu=menuDifficulty) #子菜單建立
+menuDifficulty.add_command(label='Easy',font=('Inconsolata',10), command=easy_mod)     #簡單難度(子菜單)
+menuDifficulty.add_command(label='Normal',font=('Inconsolata',10), command=normal_mod) #普通難度(子菜單)
+menuDifficulty.add_command(label='Hard',font=('Inconsolata',10), command=hard_mod)     #困難難度(子菜單)
+menuFile.add_command(label='Exit',font=('Inconsolata',10), command=window.destroy)     #離開遊戲
 menuHelp = Menu(menuBar, tearoff=False)
-menuBar.add_cascade(label='help',font=('Inconsolata',10), menu=menuHelp)
+menuBar.add_cascade(label='help',font=('Inconsolata',10), menu=menuHelp)               #幫助
 menuHelp.add_command(label='Help',font=('Inconsolata',10), command=lambda: show('Help'))
 window.config(menu=menuBar)
 '''=========================<數字顏色>============================'''
@@ -109,6 +114,7 @@ def clear_array():
 done_do_time=False
 def smile_do(event):
     global begin,can_play,counter,time_end,bomb_number_cnt,can_paly,begin,done_do_time,is_win,smile,bomb_text,time_text,last_game
+    '''==========<清除上場建置的按鈕>================'''
     if(last_game==0):
         for y in range(9):
             for x in range(9):
@@ -121,18 +127,21 @@ def smile_do(event):
         for y in range(16):
             for x in range(30):
                 btn[y][x].place_forget()
+    '''=============<清除smile和Label>============='''
     smile.place_forget()
     bomb_text.place_forget()
     time_text.place_forget()
-    if(trigger==True):
+    '''=============<trigger的觸發>==================='''
+    if(trigger==True): #防止玩加第一次就按刷新遊戲
         pause()
+    '''==============<開始由玩遊戲>==================='''
     if(event):
         done_do_time=True
     can_paly=0
     is_win = False
     begin = 1
     bomb_number_cnt=bomb_number
-    remain_bomb.set(str(bomb_number_cnt))
+    remain_bomb.set(str(bomb_number_cnt))   #炸彈數量調整
     begin=0
     counter = 0
     time_end=False
@@ -177,7 +186,7 @@ def change_time():
             for ay in range(game_Y_size):
                 for ax in range(game_X_size):
                     if(chess[ay][ax]=='💣'):
-                        appear_flag[ay][ax]='🚩'
+                        appear_flag[ay][ax]='🚩' #贏了將炸彈處，插滿旗幟
                         the_game[ay][ax]='🚩'
                         remain_bomb.set('0')
                         btn[ay][ax].config(text='🚩',fg='red')
@@ -219,6 +228,7 @@ def boom_set():
 boom_set()
 '''========================<建置數字>========================='''
 def new_set_number():
+    '''===========<透過3x3方塊掃描方式建置數字>============'''
     for y in range(game_Y_size):
         for x in range(game_X_size):
             if(chess[y][x]=='💣'):
@@ -367,33 +377,33 @@ begin=0
 def play(event,x,y):
     global t,begin,time_end,appear_flag,bomb_number_cnt,can_paly,trigger
     trigger = True
-    if (appear_flag[y][x] == '🚩'):
+    if (appear_flag[y][x] == '🚩'): #確保點選那個方塊不是旗幟
         return
-    if(event  and appear_chess[y][x]==''):
+    if(event  and appear_chess[y][x]==''):#確保已經開始遊戲
         can_paly=1
     if(begin==0 and can_paly==1):#開始計數
         begin=1
         t = Timer(1, change_time)
         t.start()
     global can_play,time_end
-    if(can_play==True and appear_flag[y][x]!='🚩'):
+    if(can_play==True and appear_flag[y][x]!='🚩'):#採到的地方不是旗幟，開始做判定
         if(chess[y][x]!='💣'):
             btn[y][x].config(text=chess[y][x],bg='#f0f0ee',fg=text_color[chess[y][x]])
             appear_chess[y][x]=chess[y][x]
             # 特別處理
             if(chess[y][x]==' '):
                 flood_fill(y,x)
-        elif(chess[y][x]=='💣'):
+        elif(chess[y][x]=='💣'): #採到炸彈處理
             time_end=True
             can_play=False
             for ay in range(game_Y_size):
                 for ax in range(game_X_size):
                     if(the_game[ay][ax]=='🚩' and chess[ay][ax]!='💣'):
-                        btn[ay][ax].config(text='❌',bg='Magenta',fg='red')
+                        btn[ay][ax].config(text='❌',bg='Magenta',fg='red') #標示出旗幟插到不是炸彈位置的地方
                     elif(chess[ay][ax]=='💣'):
                         if(the_game[ay][ax]!='🚩'):
-                            btn[ay][ax].config(bg='#f0f0ee',text=chess[ay][ax],fg='black')
-            btn[y][x].config(text=chess[y][x], bg='Red')
+                            btn[ay][ax].config(bg='#f0f0ee',text=chess[ay][ax],fg='black')#標示出炸彈
+            btn[y][x].config(text=chess[y][x], bg='Red')#採到炸彈那格會設定紅色
             change_smile.set('😱')
 '''=========================<裝飾器>============================'''
 def handlerAdaptor(fun, **kwds):
@@ -403,16 +413,16 @@ def handlerAdaptor(fun, **kwds):
 flag_cnt=0
 def flag(event,x,y):
     global appear_flag,bomb_number_cnt,is_win
-    if(is_win==True):
+    if(is_win==True): #贏了停止旗幟插旗
         return
-    if (can_play == True and appear_chess[y][x]==''):
-        if(appear_flag[y][x]==''):
+    if (can_play == True and appear_chess[y][x]==''): #正常插旗幟
+        if(appear_flag[y][x]==''):   #第一次插旗幟
             btn[y][x].config(text='🚩',fg='red')
             appear_flag[y][x]='🚩'
             the_game[y][x]='🚩'
             bomb_number_cnt-=1
             remain_bomb.set(str(bomb_number_cnt))
-        elif(appear_flag[y][x]=='🚩'):
+        elif(appear_flag[y][x]=='🚩'): #拔除旗幟
             btn[y][x].config(text=' ')
             appear_flag[y][x]=''
             the_game[y][x]=' '
@@ -429,11 +439,11 @@ def win_set():
 win_set()
 '''=========================<初始設定>============================'''
 change_smile=StringVar()
-change_smile.set('🙂')
+change_smile.set('🙂')                   #笑臉
 remain_bomb=StringVar()
-remain_bomb.set(str(bomb_number_cnt))
+remain_bomb.set(str(bomb_number_cnt))   #剩餘炸彈數量
 labelText = StringVar()
-labelText.set(str(counter))
+labelText.set(str(counter))             #計數時間
 '''=========================<新遊戲設定>============================'''
 def new_play_game():
     global bomb_text,time_text,smile
@@ -445,7 +455,7 @@ def new_play_game():
     smile.bind("<Button-1>",smile_do)#左鍵
     smile.place(y = 15,x = 300*(bomb_number%99==0)+100*(bomb_number%40==0)+135)
 new_play_game()
-'''=========================<左右鍵搜尋>============================'''
+'''=========================<滑鼠中鍵搜尋>============================'''
 def search(event,x,y):
     global appear_flag,game_Y_size,game_X_size,appear_chess
     if(chess[y][x]==' 'or appear_chess[y][x]=='' ):
@@ -486,9 +496,9 @@ def set_button():
         btn.append([])
         for x in range(game_X_size):
             btn[y].append(Button(window,width = 2,height = 1, relief=RAISED,anchor='center'))
-            btn[y][x].bind("<Button-1>",handlerAdaptor(play,x=x,y=y))
-            btn[y][x].bind("<Button-2>", handlerAdaptor(search, x=x, y=y))
-            btn[y][x].bind("<Button-3>", handlerAdaptor(flag, x=x, y=y))
+            btn[y][x].bind("<Button-1>",handlerAdaptor(play,x=x,y=y))      #滑鼠左鍵觸發
+            btn[y][x].bind("<Button-2>", handlerAdaptor(search, x=x, y=y)) #滑鼠中鍵觸發
+            btn[y][x].bind("<Button-3>", handlerAdaptor(flag, x=x, y=y))   #滑鼠右鍵觸發
             btn[y][x].config(text=' ',font='20', bg='#c6c6d3',fg=text_color[chess[y][x]])
             btn[y][x].place(y = 30*y+80,x =x*30+20)
 set_button()
