@@ -130,3 +130,13 @@ game_test:https://youtu.be/F9pDrUDzaDE
 5.加入快捷鍵F2刷新遊戲  
 6.加入快捷鍵ctrl+z離開遊戲  
 7.重新定義三種基本模式的視窗位置和大小  
+ 
+#2022/04/25 v4.3        
+====  
+功能改進:    
+1.左鍵點下去還未放開始，會是oops臉    
+2.difficult三種難度快捷鍵加入    
+3.新增No_Flag(FA)模式  
+4.新增Author  
+5.新增help功能  
+6.help功能綁快捷鍵  
