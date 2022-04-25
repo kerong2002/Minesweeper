@@ -47,8 +47,8 @@ game_test:https://youtu.be/F9pDrUDzaDE
 4.場地顏色  
 5.按鈕浮起  
 6.笑臉按鈕調整位置  
-7.menu菜單的help更新
-8.按鈕大小調整
+7.menu菜單的help更新  
+8.按鈕大小調整  
  
 #2023/04/23 v2.0    
 ====
