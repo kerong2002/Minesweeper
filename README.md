@@ -140,3 +140,10 @@ game_test:https://youtu.be/F9pDrUDzaDE
 4.新增Author  
 5.新增help功能  
 6.help功能綁快捷鍵  
+ 
+#2022/04/25 v4.4        
+====  
+功能改進:  
+1.炸彈數量原本會因為擴散而沒有變動  
+2.NF模式的笑臉會不一樣  
+3.Ctrl+H 幫助模式修復bug  
