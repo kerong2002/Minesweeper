@@ -48,7 +48,9 @@ def show(i):  #help呼叫
     tkinter.messagebox.showwarning(title='Author : Ke-Rong,Chen ', message='Thanks for playing!')
 '''=======================<幫助提示>========================================'''
 def give_help(i):
-    global appear_flag,the_game,bomb_number_cnt,btn
+    global appear_flag,the_game,bomb_number_cnt,btn,Active_no_flag
+    if (Active_no_flag == True):
+        return
     bombx = []
     bomby = []
     del bomby[:]
