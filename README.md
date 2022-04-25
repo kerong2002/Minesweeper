@@ -61,7 +61,7 @@ game_test:https://youtu.be/F9pDrUDzaDE
 6.更正整個視窗的按鈕安排與大小  
 7.除去舊有的Button and Label  
  
-#2023/04/24 v3.0  
+#202/04/24 v3.0  
 ====
 功能改進:  
 1.三種難度選擇  
