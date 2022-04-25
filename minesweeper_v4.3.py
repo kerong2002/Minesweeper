@@ -202,7 +202,7 @@ menuFile.add_command(label='Exit',font=('Inconsolata',10), command=window.destro
 window.bind('<Control-z>',lambda event: leave(True))                                                         #按鈕觸發
 menuHelp = Menu(menuBar, tearoff=False)
 menuBar.add_cascade(label='help',font=('Inconsolata',10), menu=menuHelp)               #幫助
-menuHelp.add_command(label='Auther',font=('Inconsolata',10), command=lambda: show('Help'))
+menuHelp.add_command(label='Author',font=('Inconsolata',10), command=lambda: show('Help'))
 menuHelp.add_command(label='Help',font=('Inconsolata',10), command=lambda:give_help('help_me'),accelerator='(Ctrl+H)')
 window.bind('<Control-h>',lambda event: give_help('help_me'))
 window.config(menu=menuBar)
