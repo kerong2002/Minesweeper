@@ -147,3 +147,8 @@ game_test:https://youtu.be/F9pDrUDzaDE
 1.炸彈數量原本會因為擴散而沒有變動  
 2.NF模式的笑臉會不一樣  
 3.Ctrl+H 幫助模式修復bug  
+ 
+#2022/04/29 v4.41        
+====  
+bug改進:   
+1.空白磚塊bug  
