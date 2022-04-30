@@ -152,3 +152,8 @@ game_test:https://youtu.be/F9pDrUDzaDE
 ====  
 bug改進:   
 1.空白磚塊bug  
+ 
+#2022/04/30 v4.42         
+====  
+bug改進:   
+1.空白磚塊bug  
