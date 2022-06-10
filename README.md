@@ -2,7 +2,6 @@
 踩地雷  
 game_test:https://youtu.be/F9pDrUDzaDE  
 最快踩地雷記錄:  
-![image](https://github.com/kerong2002/minesweeper/blob/main/%E8%B8%A9%E5%9C%B0%E9%9B%B7NF.PNG)  
 遊玩方式:
 以所選取該點，開始掃雷，場上數字是以它為中心的九宮格，標示炸彈的數量，
 例:
