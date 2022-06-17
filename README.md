@@ -1,7 +1,9 @@
 # minesweeper
 踩地雷  
 game_test:https://youtu.be/F9pDrUDzaDE  
-My minesweeper NF best Record:https://youtu.be/NnhoTq3_Vw0    
+My minesweeper NF best Record:   
+(2022/06/10)https://youtu.be/NnhoTq3_Vw0  
+(2022/06/17)https://youtube.com/shorts/YmPbXsQH2tk  
 遊玩方式:
 以所選取該點，開始掃雷，場上數字是以它為中心的九宮格，標示炸彈的數量，
 例:
