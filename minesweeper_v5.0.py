@@ -789,8 +789,10 @@ def search(event,x,y,check_search):
 '''===============<臉部表情oops>========================'''
 def oops(event,x,y):
     global  time_end,is_win
+    # print('done')
     if (time_end==True or is_win==True): #確保點選那個方塊不是旗幟
         return
+
     change_smile.set('😮')  #oops
 check_x=-1
 check_y=-1
@@ -821,7 +823,7 @@ def set_button():
             btn[y].append(Button(frame1,width = 3,height = 1, relief=RAISED,anchor='center'))
             btn[y][x].bind("<Button-1>", handlerAdaptor(oops, x=x, y=y))          #滑鼠左鍵觸發
             btn[y][x].bind("<ButtonRelease-1>",handlerAdaptor(play,x=x,y=y,other=0))      #滑鼠左鍵觸發
-            btn[y][x].bind("<ButtonPress-1>",handlerAdaptor(call_back,x=x,y=y,other=0))   #紀錄滑鼠左鍵處發位置
+            btn[y][x].bind("<ButtonPress-1>",handlerAdaptor(call_back,x=x,y=y,other=0), handlerAdaptor(oops, x=x, y=y))   #紀錄滑鼠左鍵處發位置
             btn[y][x].bind("<Button-2>", handlerAdaptor(search, x=x, y=y,check_search=1))        #滑鼠中鍵觸發
             btn[y][x].bind("<Button-1><Button-3>", handlerAdaptor(search, x=x, y=y,check_search=1))  # 滑鼠左右鍵觸發
             btn[y][x].bind("<Button-3><Button-1>", handlerAdaptor(search, x=x, y=y,check_search=1))  # 滑鼠左右鍵觸發
