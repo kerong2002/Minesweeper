@@ -1,9 +1,8 @@
 # Minesweeper
 ### Programer：KeRong  &nbsp;&nbsp;&nbsp;Used：Python Tkinter &nbsp;&nbsp;&nbsp;Update：2022/08/27  
 ![](https://i.imgur.com/dwHgLaU.png)
-- Game_test:https://youtu.be/F9pDrUDzaDE  
-My minesweeper NF best Record:   
-- [3.278s](https://youtube.com/shorts/YmPbXsQH2tk)  (2022/06/17)
+- Game_test：https://youtu.be/F9pDrUDzaDE  
+- My minesweeper NF best Record：[3.278s](https://youtube.com/shorts/YmPbXsQH2tk)  (2022/06/17)
 
 遊玩方式：  
 以所選取該點，開始掃雷，場上數字是以它為中心的九宮格，標示炸彈的數量。    
