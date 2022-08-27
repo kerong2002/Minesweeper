@@ -3,7 +3,6 @@
 ![](https://i.imgur.com/dwHgLaU.png)
 - Game_test:https://youtu.be/F9pDrUDzaDE  
 - My minesweeper NF best Record:   
-- (2022/06/10)https://youtu.be/NnhoTq3_Vw0  
 - (2022/06/17)https://youtube.com/shorts/YmPbXsQH2tk  
 
 遊玩方式：  
