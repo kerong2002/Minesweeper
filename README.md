@@ -21,7 +21,7 @@ My minesweeper NF best Record:
 編寫程式:python tkinter    
 ![image](https://github.com/kerong2002/minesweeper/blob/main/minesweeper.PNG)  
  
-#2022/04/21 更新  
+#2022/04/21 V1.0 更新  
 ====
 功能補齊:  
 1.滑鼠左鍵開啟該方塊  
@@ -33,7 +33,7 @@ My minesweeper NF best Record:
 7.踩到的那顆炸彈會顯示不同顏色  
 8.插錯旗幟(插到不是炸彈的位置)會打X  
  
-#2022/04/22 更新  
+#2022/04/22 V1.0 更新  
 ====
 功能補齊:  
 1.滑鼠中鍵特殊擴散(前替是點擊該點數字周圍有相對應數量的旗幟數)   
@@ -41,7 +41,7 @@ My minesweeper NF best Record:
 3.炸彈數量除錯  
 4.贏了會自動插旗幟且炸彈數量會顯示0  
  
-#2022/04/23 更新  
+#2022/04/23 V1.0 更新  
 ====
 功能補齊:  
 1.數字顏色  
