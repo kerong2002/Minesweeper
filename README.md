@@ -1,6 +1,6 @@
 # minesweeper
 ### Programer：KeRong  &nbsp;&nbsp;&nbsp;Used：Python Tkinter &nbsp;&nbsp;&nbsp;Update：2022/08/27
-
+[Imgur](https://i.imgur.com/4EpA1ZN.gifv)
 - Game_test:https://youtu.be/F9pDrUDzaDE  
 - My minesweeper NF best Record:   
 - (2022/06/10)https://youtu.be/NnhoTq3_Vw0  
