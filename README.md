@@ -1,9 +1,10 @@
 # minesweeper
-### Programer：KeRong  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update：2022/08/27 
-game_test:https://youtu.be/F9pDrUDzaDE  
-My minesweeper NF best Record:   
-(2022/06/10)https://youtu.be/NnhoTq3_Vw0  
-(2022/06/17)https://youtube.com/shorts/YmPbXsQH2tk  
+### Programer：KeRong  &nbsp;&nbsp;&nbsp;Used:Python Tkinter &nbsp;&nbsp;&nbsp;Update：2022/08/27
+
+- Game_test:https://youtu.be/F9pDrUDzaDE  
+- My minesweeper NF best Record:   
+- (2022/06/10)https://youtu.be/NnhoTq3_Vw0  
+- (2022/06/17)https://youtube.com/shorts/YmPbXsQH2tk  
 遊玩方式:
 以所選取該點，開始掃雷，場上數字是以它為中心的九宮格，標示炸彈的數量，
 例:
@@ -14,11 +15,7 @@ My minesweeper NF best Record:
 ```
 數字4周圍的九宮格含有四顆炸彈，所以中間標示數字為4  
 **目標**: 不要踩到任何炸彈，除去非炸彈的位置，即可獲得勝利  
-          不插旗幟，點完全圖非炸彈位置，也視為勝利  
-高度:9格  
-寬度:9格  
-炸彈數量:10顆  
-編寫程式:python tkinter    
+          不插旗幟，點完全圖非炸彈位置，也視為勝利     
 ![image](https://github.com/kerong2002/minesweeper/blob/main/minesweeper.PNG)  
  
 #2022/04/21 V1.0 更新  
