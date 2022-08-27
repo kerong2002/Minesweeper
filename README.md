@@ -1,4 +1,4 @@
-# minesweeper
+# Minesweeper
 ### Programer：KeRong  &nbsp;&nbsp;&nbsp;Used：Python Tkinter &nbsp;&nbsp;&nbsp;Update：2022/08/27  
 ![](https://i.imgur.com/dwHgLaU.png)
 - Game_test:https://youtu.be/F9pDrUDzaDE  
