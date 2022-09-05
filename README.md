@@ -1,5 +1,5 @@
 # Minesweeper
-### Programer：KeRong&nbsp;&nbsp;Used：Python Tkinter &nbsp;&nbsp;Update：2022/08/27&nbsp;&nbs;psponsor：KaiHan 
+### Programer：KeRong&nbsp;&nbsp;Used：Python Tkinter &nbsp;&nbsp;Update：2022/08/27&nbsp;&nbsp;sponsor：KaiHan 
 sponsor
 ![](https://i.imgur.com/dwHgLaU.png)
 - Game_test：https://youtu.be/F9pDrUDzaDE  
