@@ -5,6 +5,25 @@
 - Game_test：https://youtu.be/F9pDrUDzaDE  
 - My minesweeper NF best Record：[3.278s](https://youtube.com/shorts/YmPbXsQH2tk)  (2022/06/17)
 
+| Feature | Description |
+| --- | --- |
+| Cheat mode | Pressing Ctrl + Shift + Alt + up will reveal all bomb locations for easier debugging. |
+| Help mode | Pressing Ctrl + h will place a flag, allowing players to mark potential bomb locations for later reference. |
+| Restart game | Pressing F2 will start a new game. |
+| Difficulty levels | Pressing F3, F4, or F5 will set the difficulty level to easy, medium, or hard, respectively. |
+| Exit game | Pressing Ctrl + z will exit the game. |
+| No Flag mode | This checkbox option disables the use of flags. |
+| Number colors | The numbers on the board are color-coded for better visibility. |
+| Refresh game | Clicking the smiley face icon will refresh the game board. |
+| Mouse cursor | The cursor changes over the smiley face icon to indicate different game states. |
+| Difficulty selection | The menu allows players to choose between easy, medium, hard, and custom difficulty levels. |
+| Custom difficulty | Players can customize the game board size and number of bombs using a dropdown menu. |
+| Mouse actions | Players can use left, right, and middle mouse clicks to clear tiles and place flags. |
+| Auto-expand tiles | When a numbered tile has the correct number of adjacent flags, all surrounding tiles will automatically be cleared. |
+| Scary face | The smiley face icon turns into a scared face when the player clicks on a bomb tile. |
+| Flag placement error | If a flag is placed incorrectly, an X will appear on the board and the game is lost. |
+
+
 遊玩方式：  
 以所選取該點，開始掃雷，場上數字是以它為中心的九宮格，標示炸彈的數量。    
 例：  
