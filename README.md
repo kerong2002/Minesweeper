@@ -6,7 +6,7 @@
 - My minesweeper NF best Record：[3.278s](https://youtube.com/shorts/YmPbXsQH2tk)  (2022/06/17)
 
 | Feature | Description |
-| --- | --- |
+| :---: | :--- |
 | Cheat mode | Pressing Ctrl + Shift + Alt + up will reveal all bomb locations for easier debugging. |
 | Help mode | Pressing Ctrl + h will place a flag, allowing players to mark potential bomb locations for later reference. |
 | Restart game | Pressing F2 will start a new game. |
